@@ -1,12 +1,18 @@
 //: Tarea 1
 
+/*
+ * Consideraciones:
+ * El número Cero lo considero un número par
+ * Las reglas no son excluyentes
+ */
+
 import UIKit
 
 
 var rango = 0...100
 
 for i in rango {
-    if (i%5) == 5 {
+    if i >= 5 && (i%5) == 0 {
         print ("\(i) Bingo!!!")
     }
     
