@@ -154,17 +154,30 @@
                         <separator alignment="left" id="g0S-WY-whn"/>
                         <group width="1" alignment="left" id="mPC-cY-w7v">
                             <items>
-                                <label width="1" alignment="left" text="Label" textAlignment="center" id="qlr-bx-u75"/>
-                                <label alignment="left" text="Label" id="QBK-nJ-CDf"/>
-                                <label alignment="left" text="Label" id="cLt-6u-5WH"/>
-                                <label alignment="left" text="Label" id="lk1-LV-EFD"/>
-                                <label alignment="left" text="Label" id="ey5-TW-Vfy"/>
+                                <label alignment="left" id="QBK-nJ-CDf"/>
+                                <label alignment="right" textAlignment="left" id="cLt-6u-5WH"/>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="Solicitar pedido" id="Pip-nR-vdr"/>
+                        <group width="1" alignment="left" id="9Hd-i8-vFm">
+                            <items>
+                                <label alignment="left" id="npT-qs-J5B"/>
+                                <label alignment="right" id="lk1-LV-EFD"/>
+                            </items>
+                        </group>
+                        <label alignment="left" id="ey5-TW-Vfy"/>
+                        <separator alignment="left" id="13Y-gK-744"/>
+                        <button width="1" alignment="left" title="Solicitar pedido" id="Pip-nR-vdr">
+                            <connections>
+                                <action selector="solicitarPedido" destination="7LU-1Q-j9m" id="ANv-RY-RoH"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="ingredientes" destination="qlr-bx-u75" id="k14-DC-D5H"/>
+                        <outlet property="ing1" destination="QBK-nJ-CDf" id="uCL-3p-zm8"/>
+                        <outlet property="ing2" destination="cLt-6u-5WH" id="XCo-8K-l1n"/>
+                        <outlet property="ing3" destination="npT-qs-J5B" id="hL3-pG-H5B"/>
+                        <outlet property="ing4" destination="lk1-LV-EFD" id="TUK-VF-oiH"/>
+                        <outlet property="ing5" destination="ey5-TW-Vfy" id="kMK-jN-TWP"/>
                         <outlet property="tamanno" destination="9xy-OU-d9z" id="oPI-fL-WMH"/>
                         <outlet property="tipoMasa" destination="XAp-NO-Fgm" id="aYP-ru-an3"/>
                         <outlet property="tipoQueso" destination="B5i-5b-ddB" id="h1a-Lx-f4e"/>

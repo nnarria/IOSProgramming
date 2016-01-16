@@ -14,10 +14,16 @@ class ResumenController: WKInterfaceController {
 
     var dPizza: DatosPizza!
     
+    @IBOutlet var ing1: WKInterfaceLabel!
+    @IBOutlet var ing2: WKInterfaceLabel!
+    @IBOutlet var ing3: WKInterfaceLabel!
+    @IBOutlet var ing4: WKInterfaceLabel!
+    @IBOutlet var ing5: WKInterfaceLabel!
+    
+    
     @IBOutlet var tamanno: WKInterfaceLabel!
     @IBOutlet var tipoMasa: WKInterfaceLabel!
     @IBOutlet var tipoQueso: WKInterfaceLabel!
-    @IBOutlet var ingredientes: WKInterfaceLabel!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -36,47 +42,86 @@ class ResumenController: WKInterfaceController {
         tipoQueso.setText(dPizza.tipoQueso)
         
 
-        var tmp:String = ""
+        var tmps:[String] = [String]()
+        
+        
         if (dPizza.switchJamon) {
-            tmp = "Jamón, \n"
+            tmps.append("Jamón")
         }
         
         if (dPizza.switchPepperoni) {
-            tmp += "Pepperoni, \n"
+            tmps.append("Pepperoni")
         }
         
         if (dPizza.switchPavo) {
-            tmp += "Pavo, "
+            tmps.append("Pavo")
         }
         
         if (dPizza.switchSalchicha) {
-            tmp += "Salchicha, "
+            tmps.append("Salchicha")
         }
         
         if (dPizza.switchAceituna) {
-            tmp += "Aceituna, "
+            tmps.append("Aceituna")
         }
         
         if (dPizza.switchCebolla) {
-            tmp += "Cebolla, "
+            tmps.append("Cebolla")
         }
         
         if (dPizza.switchPimiento) {
-            tmp += "Pimiento, "
+            tmps.append("Pimiento")
         }
         
         if (dPizza.switchPinna) {
-            tmp += "Piña, "
+            tmps.append("Piña")
         }
         
         if (dPizza.switchAnchoa) {
-            tmp += "Anchoa"
+            tmps.append("Anchoa")
         }
         
-        ingredientes.setText(tmp)
+        
+        for i in 1...tmps.count {
+            if (i == 1) {
+                ing1.setText(tmps[i-1])
+            }
+            else if (i == 2) {
+                ing2.setText(tmps[i-1])
+            }
+            else if (i == 3) {
+                ing3.setText(tmps[i-1])
+            }
+            else if (i == 4) {
+                ing4.setText(tmps[i-1])
+            }
+            else {
+                ing5.setText(tmps[i-1])
+            }
+            
+        }
+        
+        //ingredientes.setText(tmp)
         
     }
 
+    @IBAction func solicitarPedido() {
+        self.showAlertWithStyle(WKAlertControllerStyle.Alert, titulo:"Información", mensaje: "La pizza ha sido enviada para su preparación!!!")
+    }
+    
+    
+    func showAlertWithStyle(style: WKAlertControllerStyle, titulo:String, mensaje:String) {
+        let action = WKAlertAction(title: "Ok", style: WKAlertActionStyle.Default, handler: { () -> Void in
+            print("default action method..")
+        })
+
+        var actions = NSArray()
+        actions = [action]
+        self.presentAlertControllerWithTitle(titulo, message: mensaje, preferredStyle: style, actions: actions as! [WKAlertAction])
+    }
+
+
+    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
