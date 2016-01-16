@@ -19,6 +19,12 @@
 		253E31C51C472C4000A1752A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E31C41C472C4000A1752A /* InterfaceController.swift */; };
 		253E31C71C472C4000A1752A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E31C61C472C4000A1752A /* ExtensionDelegate.swift */; };
 		253E31C91C472C4000A1752A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253E31C81C472C4000A1752A /* Assets.xcassets */; };
+		253E31D91C48646100A1752A /* DatosPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E31D81C48646100A1752A /* DatosPizza.swift */; };
+		253E31DB1C48680100A1752A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E31DA1C48680100A1752A /* HomeController.swift */; };
+		25723F511C496771003ACF1F /* TipoMasaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25723F501C496771003ACF1F /* TipoMasaController.swift */; };
+		25723F531C49766C003ACF1F /* TipoQuesoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25723F521C49766C003ACF1F /* TipoQuesoController.swift */; };
+		25723F551C49821B003ACF1F /* IngredientesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25723F541C49821B003ACF1F /* IngredientesController.swift */; };
+		25723F571C498481003ACF1F /* ResumenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25723F561C498481003ACF1F /* ResumenController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +86,12 @@
 		253E31C61C472C4000A1752A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		253E31C81C472C4000A1752A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		253E31CA1C472C4000A1752A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		253E31D81C48646100A1752A /* DatosPizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatosPizza.swift; sourceTree = "<group>"; };
+		253E31DA1C48680100A1752A /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		25723F501C496771003ACF1F /* TipoMasaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoMasaController.swift; sourceTree = "<group>"; };
+		25723F521C49766C003ACF1F /* TipoQuesoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoQuesoController.swift; sourceTree = "<group>"; };
+		25723F541C49821B003ACF1F /* IngredientesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientesController.swift; sourceTree = "<group>"; };
+		25723F561C498481003ACF1F /* ResumenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumenController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +162,12 @@
 				253E31C61C472C4000A1752A /* ExtensionDelegate.swift */,
 				253E31C81C472C4000A1752A /* Assets.xcassets */,
 				253E31CA1C472C4000A1752A /* Info.plist */,
+				253E31D81C48646100A1752A /* DatosPizza.swift */,
+				253E31DA1C48680100A1752A /* HomeController.swift */,
+				25723F501C496771003ACF1F /* TipoMasaController.swift */,
+				25723F521C49766C003ACF1F /* TipoQuesoController.swift */,
+				25723F541C49821B003ACF1F /* IngredientesController.swift */,
+				25723F561C498481003ACF1F /* ResumenController.swift */,
 			);
 			path = "ArmaTuPizzaDesdeAppleWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -295,8 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253E31DB1C48680100A1752A /* HomeController.swift in Sources */,
+				25723F551C49821B003ACF1F /* IngredientesController.swift in Sources */,
+				253E31D91C48646100A1752A /* DatosPizza.swift in Sources */,
 				253E31C71C472C4000A1752A /* ExtensionDelegate.swift in Sources */,
+				25723F531C49766C003ACF1F /* TipoQuesoController.swift in Sources */,
+				25723F571C498481003ACF1F /* ResumenController.swift in Sources */,
 				253E31C51C472C4000A1752A /* InterfaceController.swift in Sources */,
+				25723F511C496771003ACF1F /* TipoMasaController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +549,7 @@
 				253E31CF1C472C4000A1752A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		253E31D11C472C4000A1752A /* Build configuration list for PBXNativeTarget "ArmaTuPizzaDesdeAppleWatch WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +558,7 @@
 				253E31D31C472C4000A1752A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		253E31D51C472C4000A1752A /* Build configuration list for PBXNativeTarget "ArmaTuPizzaDesdeAppleWatch" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +567,7 @@
 				253E31D71C472C4000A1752A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

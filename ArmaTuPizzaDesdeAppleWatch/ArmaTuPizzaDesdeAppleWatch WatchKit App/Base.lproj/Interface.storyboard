@@ -1,15 +1,201 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vjc-At-R4u">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Home Controller-->
+        <scene sceneID="HBj-kU-Qqu">
+            <objects>
+                <controller id="Vjc-At-R4u" customClass="HomeController" customModule="ArmaTuPizzaDesdeAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Arma tu pizza YA!" textAlignment="center" id="6xy-VG-2Mc"/>
+                        <button width="1" alignment="left" title="Comenzar" id="iBG-WQ-xRx">
+                            <connections>
+                                <action selector="irPrimerPaso" destination="Vjc-At-R4u" id="tOf-pH-kRY"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-76" y="15"/>
+        </scene>
+        <!--tercerPaso-->
+        <scene sceneID="zZ5-bj-aRb">
+            <objects>
+                <controller identifier="tercerPaso" id="kHf-im-Rvx" customClass="TipoQuesoController" customModule="ArmaTuPizzaDesdeAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Tipo de Queso" textAlignment="center" id="92Y-Jx-RcF"/>
+                        <picker height="85" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="JKZ-57-gzJ">
+                            <connections>
+                                <action selector="quesoSelected:" destination="kHf-im-Rvx" id="nz6-ZB-J68"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Ir al paso 4 &gt;" id="HgD-W2-yPG">
+                            <connections>
+                                <action selector="irCuartoPaso" destination="kHf-im-Rvx" id="99N-w2-ynx"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="itemPicker" destination="JKZ-57-gzJ" id="t4o-6c-jip"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="480" y="13"/>
+        </scene>
+        <!--segundoPaso-->
+        <scene sceneID="Yje-Fq-u0Q">
+            <objects>
+                <controller identifier="segundoPaso" id="nyM-Ss-fIC" customClass="TipoMasaController" customModule="ArmaTuPizzaDesdeAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Tipo de Masa" textAlignment="center" id="gxq-dP-5cM"/>
+                        <picker height="85" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="aNi-qd-X9L">
+                            <connections>
+                                <action selector="itemSelected:" destination="nyM-Ss-fIC" id="ilQ-Vk-5Ob"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Ir al paso 3 &gt;" id="yLt-Hl-Loy">
+                            <connections>
+                                <action selector="irTercerPaso" destination="nyM-Ss-fIC" id="wGR-Wf-e31"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="itemPicker" destination="aNi-qd-X9L" id="zdJ-5R-fQE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="334" y="13"/>
+        </scene>
+        <!--cuartoPaso-->
+        <scene sceneID="CFB-un-m3j">
+            <objects>
+                <controller identifier="cuartoPaso" id="bb6-KS-6eS" customClass="IngredientesController" customModule="ArmaTuPizzaDesdeAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Ingredientes" textAlignment="center" id="GOp-pA-ry9"/>
+                        <switch width="1" alignment="left" title="Jamón" id="CTM-1e-4q0">
+                            <connections>
+                                <action selector="changeSwitchJamon:" destination="bb6-KS-6eS" id="8iB-ye-CPF"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pepperoni" id="ZG0-1P-O0t">
+                            <connections>
+                                <action selector="changeSwitchPepperoni:" destination="bb6-KS-6eS" id="aFB-Ds-g96"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pavo" id="GcC-Fl-pl5">
+                            <connections>
+                                <action selector="changeSwitchPavo:" destination="bb6-KS-6eS" id="5mX-yi-1Wz"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Salchicha" id="B6W-F5-dr8">
+                            <connections>
+                                <action selector="changeSwitchSalchicha:" destination="bb6-KS-6eS" id="ZnF-ie-VXa"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Aceituna" id="dbM-C0-MMM">
+                            <connections>
+                                <action selector="changeSwitchAceituna:" destination="bb6-KS-6eS" id="xcF-cd-hSe"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Cebolla" id="wG1-Ix-62z">
+                            <connections>
+                                <action selector="changeSwitchCebolla:" destination="bb6-KS-6eS" id="f3J-eW-a0B"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pimiento" id="4Ma-ZT-cw4">
+                            <connections>
+                                <action selector="changeSwitchPimiento:" destination="bb6-KS-6eS" id="T6P-ax-1aX"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Piña" id="e2I-2g-4bz">
+                            <connections>
+                                <action selector="changeSwitchPinna:" destination="bb6-KS-6eS" id="g5s-uo-cbG"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Anchoa" id="tBP-R8-Vaf">
+                            <connections>
+                                <action selector="changeSwitchAnchoa:" destination="bb6-KS-6eS" id="QDb-Fa-BSF"/>
+                            </connections>
+                        </switch>
+                        <button width="1" alignment="left" title="Ir al paso 5 &gt;" id="GqA-Qc-JHa">
+                            <connections>
+                                <action selector="irQuintoPaso" destination="bb6-KS-6eS" id="kck-Ks-3z7"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="ingAceituna" destination="dbM-C0-MMM" id="1a8-PU-5Lc"/>
+                        <outlet property="ingAnchoa" destination="tBP-R8-Vaf" id="wDL-Nv-fL7"/>
+                        <outlet property="ingCebolla" destination="wG1-Ix-62z" id="Pbq-f9-8KX"/>
+                        <outlet property="ingJamon" destination="CTM-1e-4q0" id="feZ-fc-aQy"/>
+                        <outlet property="ingPavo" destination="GcC-Fl-pl5" id="3tT-aI-Rnc"/>
+                        <outlet property="ingPepperoni" destination="ZG0-1P-O0t" id="mPd-Ti-XKt"/>
+                        <outlet property="ingPimiento" destination="4Ma-ZT-cw4" id="bgd-ca-HBo"/>
+                        <outlet property="ingPinna" destination="e2I-2g-4bz" id="Y9y-VJ-4NR"/>
+                        <outlet property="ingSalchicha" destination="B6W-F5-dr8" id="gaT-5O-OcY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="633" y="13"/>
+        </scene>
+        <!--quintoPaso-->
+        <scene sceneID="eW5-o5-roi">
+            <objects>
+                <controller identifier="quintoPaso" id="7LU-1Q-j9m" customClass="ResumenController" customModule="ArmaTuPizzaDesdeAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" id="9xy-OU-d9z"/>
+                        <separator alignment="left" id="UbP-nA-3Zr"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" id="XAp-NO-Fgm"/>
+                        <separator alignment="left" id="fWN-dx-VQp"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" id="B5i-5b-ddB"/>
+                        <separator alignment="left" id="g0S-WY-whn"/>
+                        <group width="1" alignment="left" id="mPC-cY-w7v">
+                            <items>
+                                <label width="1" alignment="left" text="Label" textAlignment="center" id="qlr-bx-u75"/>
+                                <label alignment="left" text="Label" id="QBK-nJ-CDf"/>
+                                <label alignment="left" text="Label" id="cLt-6u-5WH"/>
+                                <label alignment="left" text="Label" id="lk1-LV-EFD"/>
+                                <label alignment="left" text="Label" id="ey5-TW-Vfy"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Solicitar pedido" id="Pip-nR-vdr"/>
+                    </items>
+                    <connections>
+                        <outlet property="ingredientes" destination="qlr-bx-u75" id="k14-DC-D5H"/>
+                        <outlet property="tamanno" destination="9xy-OU-d9z" id="oPI-fL-WMH"/>
+                        <outlet property="tipoMasa" destination="XAp-NO-Fgm" id="aYP-ru-an3"/>
+                        <outlet property="tipoQueso" destination="B5i-5b-ddB" id="h1a-Lx-f4e"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="789" y="13"/>
+        </scene>
+        <!--primerPaso-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller identifier="primerPaso" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ArmaTuPizzaDesdeAppleWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" alignment="left" text="Tamaño" textAlignment="center" id="PWv-wk-tVG"/>
+                        <picker height="84" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="RmS-UM-CuU">
+                            <connections>
+                                <action selector="pickerSelectedItemChanged:" destination="AgC-eL-Hgc" id="cgF-O4-hqH"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Ir al paso 2 &gt;" id="fIs-9i-blI">
+                            <connections>
+                                <action selector="irSegundoPaso" destination="AgC-eL-Hgc" id="5sS-9W-uJg"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="itemPicker" destination="RmS-UM-CuU" id="8Im-MG-tfN"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="171" y="15"/>
         </scene>
     </scenes>
 </document>
