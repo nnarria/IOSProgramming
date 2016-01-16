@@ -145,37 +145,12 @@ class IngredientesController: WKInterfaceController {
     
     // prepare Alert with setted style
     func showAlertWithStyle(style: WKAlertControllerStyle, titulo:String, mensaje:String) {
-        // init the Alert Actions
-        
-        /*
-        let cancel = WKAlertAction(title: "Cancel", style: WKAlertActionStyle.Cancel, handler: { () -> Void in
-            print("cancel")
-        })
-        */
-        
         let action = WKAlertAction(title: "Ok", style: WKAlertActionStyle.Default, handler: { () -> Void in
             print("default action method..")
         })
-        
-        /*
-        let destructive = WKAlertAction(title: "Destructive", style: WKAlertActionStyle.Destructive, handler: { () -> Void in
-            print("destructive")
-        })
-        */
-
-        // populate an array of actions
         var actions = NSArray()
-        
-        /*
-        if style == WKAlertControllerStyle.SideBySideButtonsAlert {
-            actions = [action]
-        }else{
-            actions = [action]
-        }
-        */
-        
         actions = [action]
-        // presented Alert Controller
+        
         self.presentAlertControllerWithTitle(titulo, message: mensaje, preferredStyle: style, actions: actions as! [WKAlertAction])
     }
     
